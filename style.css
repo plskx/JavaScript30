@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    font-size: 50px;
+}
+
+main {
+    font-size: 26px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+    padding: 50px;
+}
