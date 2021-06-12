@@ -54,7 +54,6 @@ dogs.forEach((dog) => {
 });
 
 // counting
-
 console.count("Wes");
 console.count("Wes");
 console.count("Steve");

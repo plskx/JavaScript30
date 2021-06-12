@@ -5,15 +5,15 @@
 }
 
 img {
-    width: 65%;
-    height: 65%;
-    padding: var(--spacing);
-    background: var(--base);
-    filter: blur(var(--blur));
+  width: 65%;
+  height: 65%;
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
 }
 
 .hl {
-    color: var(--base);
+  color: var(--base);
 }
 
 body {
