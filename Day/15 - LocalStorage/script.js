@@ -4,7 +4,6 @@ const itemsList = document.querySelector(".plates");
 // buttons
 const reset = document.querySelector(".reset");
 const checkAll = document.querySelector(".checkAll");
-const unCheckAll = document.querySelector(".unCheckAll");
 
 let items = JSON.parse(localStorage.getItem("items")) || [];
 
@@ -55,22 +54,22 @@ reset.addEventListener("click", () => {
   localStorage.setItem("items", JSON.stringify(items));
 });
 
+let meow = false;
+
 checkAll.addEventListener("click", () => {
-  items.forEach((item) => {
-    item.done = true;
-  });
+  meow = !meow;
+  if (meow) {
+    checkAll.textContent = "Uncheck All";
+    items.forEach((item) => {
+      item.done = true;
+    });
+  } else {
+    checkAll.textContent = "Check All";
+    items.forEach((item) => {
+      item.done = false;
+    });
+  }
 
   populateList(items, itemsList);
   localStorage.setItem("items", JSON.stringify(items));
 });
-
-unCheckAll.addEventListener("click", () => {
-  items.forEach((item) => {
-    item.done = false;
-  });
-
-  populateList(items, itemsList);
-  localStorage.setItem("items", JSON.stringify(items));
-});
-
-populateList(items, itemsList);
