@@ -11,11 +11,19 @@ const seconds = timeNodes
   .reduce((total, vidSeconds) => total + vidSeconds);
 
 let secondsLeft = seconds;
-const hours = Math.floor(secondsLeft / 3600);
-secondsLeft = secondsLeft % 3600;
 
-const mins = Math.floor(secondsLeft / 60);
-secondsLeft = secondsLeft % 60;
+// const hours = Math.floor(secondsLeft / 3600);
+// secondsLeft = secondsLeft % 3600;
 
-console.log(hours, mins, secondsLeft);
-h1.textContent = `${hours} hrs ${mins} mins ${secondsLeft} mins left`;
+// const mins = Math.floor(secondsLeft / 60);
+// secondsLeft = secondsLeft % 60;
+
+// console.log(hours, mins, secondsLeft);
+
+// h1.textContent = `${hours} hrs ${mins} mins ${secondsLeft} mins left`;
+
+const time = new Date(null);
+time.setSeconds(17938);
+h1.textContent = `${time.toISOString().substr(11, 8)} mins left`;
+
+console.log(`${time.toISOString().substr(11, 8)} mins left`);
