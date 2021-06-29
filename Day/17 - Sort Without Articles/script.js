@@ -20,8 +20,10 @@ const removeSomeShits = bands.map((band) => band.replace(/^(the|a|an)\s/i, ""));
 
 const sortedBands = removeSomeShits.sort((a, b) => (a > b ? 1 : -1));
 
-sortedBands.forEach((band) => {
-  const li = document.createElement("li");
-  li.appendChild(document.createTextNode(band));
-  ul.appendChild(li);
-});
+// sortedBands.forEach((band) => {
+//   const li = document.createElement("li");
+//   li.appendChild(document.createTextNode(band));
+//   ul.appendChild(li);
+// });
+
+ul.innerHTML = sortedBands.map((band) => `<li>${band}</li>`).join("");
