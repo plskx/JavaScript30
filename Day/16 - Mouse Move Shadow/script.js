@@ -4,7 +4,7 @@ const walk = 500; // 500px
 
 function shadow(e) {
   const { offsetWidth: width, offsetHeight: height } = hero;
-  let { clientX: x, clientY: y } = e;
+  const { clientX: x, clientY: y } = e;
 
   const xWalk = Math.round((x / width) * walk - walk / 2);
   const yWalk = Math.round((y / height) * walk - walk / 2);
