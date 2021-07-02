@@ -1,3 +1,5 @@
-node_modules/
-draft/
-.vscode/
+node_modules
+
+draft
+
+.vscode
